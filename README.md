@@ -1,6 +1,6 @@
 # ESKF for ESP32 with BNO085, VL53Lx, PMW3901
-
-This project implements an Extended Kalman Filter (ESKF) for the ESP32 platform, integrating the following sensors:
+For now, the tests gives me a little bit of drift, and, in some moment passing 2 minutes, the lectures of the position shoot too high.
+This project implements an early testing version of a Extended Kalman Filter (ESKF) for the ESP32 platform, integrating the following sensors:
 - BNO085 IMU
 - VL53Lx time-of-flight distance sensor
 - PMW3901 optical flow sensor
