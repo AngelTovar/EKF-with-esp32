@@ -3,7 +3,7 @@
 
 // Parámetros de calibración y ruido
 struct Cal {
-  // --- Bias IMU (ajústalos tras promediar en reposo) ---
+  // --- Bias IMU
   float gyro_bias[3]      = { 0.0f, 0.0f, 0.0f };   // rad/s
   float acc_bias_body[3]  = { 0.0f, 0.0f, 0.0f };   // m/s^2 (BNO08x linear accel)
 
@@ -12,7 +12,7 @@ struct Cal {
   float deadband_acc  = 0.004f;       // m/s^2 para ZUPT (cuerpo)
 
   // --- Flow PMW3901 ---
-  // Escalas típicas ~1/500 rad/cuenta (ajusta por tu montaje / óptica)
+  // Escalas típicas ~1/500 rad/cuenta, falta testear
   float flow_counts_to_rad_x = 1.0f/500.0f;
   float flow_counts_to_rad_y = 1.0f/500.0f;
 
