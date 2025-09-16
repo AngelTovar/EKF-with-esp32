@@ -17,7 +17,7 @@ namespace {
 
 namespace Sensors {
 
-// ---------- BNO08x ----------
+//BNO08x
 static void imuBegin(){
   // I2C robusto
   Wire.begin(SDA, SCL);
@@ -46,13 +46,13 @@ bool imuGetEvent(sh2_SensorValue_t &evt){
   return bno08x.getSensorEvent(&evt);
 }
 
-// ---------- PMW3901 ----------
+//PMW3901
 static void flowBegin(){
   SPI.begin();
   g_flow_ok = flow.begin();   // la lib devuelve bool (true si OK)
 }
 
-// ---------- VL53L1X ----------
+//VL53L1X
 static void tofBegin(){
   Wire.beginTransmission(TOF_ADDR);
   if(Wire.endTransmission()!=0){ g_tof_ok=false; return; }
